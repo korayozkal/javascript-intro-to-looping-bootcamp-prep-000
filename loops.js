@@ -1,9 +1,12 @@
-function forLoop(array) {
-    for (let i = 1; i <= 25; i++) {
-        array.push(`I am ${i} strange ${i == 0 ? 'loop' : 'loops'}.`)
+function forLoop(array){
+  for (let i = 0; i < 25; i++)
+  {
+    if (i === 1) {
+    array.push( `I am 1 strange loop. `);
     }
-    return array;
+    else {
+    array.push( `I am ${i} strange loops.`);
+    }
+  }
+  return array;
 }
-
-const result = forLoop([]);
-console.log(result);
