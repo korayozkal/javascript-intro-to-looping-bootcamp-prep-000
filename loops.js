@@ -11,15 +11,17 @@ function forLoop(array){
   return array
 }
 
-function doWhileLoop(array){
-function maybeTrue() {
-return Math.random() >= 0.5
+function doWhileLoop(array) {
+  
+  var i = 0; 
+  
+  function incrementVariable() {
+  i = i + 1;
 }
-
-do {
-array.pop();
-} while (array.length > 0 & maybeTrue());
-return array;
-
+do{
+  array.pop();
+  incrementVariable();
 }
-
+while (array.length > 0 && incrementVariable());
+return array ;
+}
